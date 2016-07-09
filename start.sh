@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SERVER_NAME=$1
+GAME_PASS=$2
+
+docker run \
+    -e KF_SERVER_NAME=$SERVER_NAME \
+    -e KF_GAMEPASS=$GAME_PASS \
+    -v $(pwd)/kf:/kf \
+    -p 7707:7707/udp \
+    -p 7708:7708/udp \
+    -p 7717:7717/udp \
+    -p 8075:8075/tcp \
+    -p 20650:20650/udp \
+    -p 28852:28852 \
+    -it lagooned/kf-server:latest
