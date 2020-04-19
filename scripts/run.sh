@@ -18,4 +18,4 @@ sed -i s/CharSet="iso-8859-1"/CharSet="utf-8"/g /kf/System/UWeb.int
 
 set +x
 
-cd /kf/System && ./ucc-bin server KF-BioticsLab.rom?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=/kf/System/Default.ini
+cd /kf/System && ./ucc-bin server KF-BioticsLab.rom?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=Default.ini
