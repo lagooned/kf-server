@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --tag lagooned/kf-server .
+podman build --tag lagooned/kf-server .

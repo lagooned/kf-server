@@ -7,7 +7,8 @@ GAME_PASS=$2
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-docker run \
+podman run \
+    --userns keep-id\
     -e KF_SERVER_NAME="${SERVER_NAME}"\
     -e KF_GAMEPASS="${GAME_PASS}" \
     -v $CURRENT_DIR/kf:/kf \
