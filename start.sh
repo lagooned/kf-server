@@ -11,7 +11,7 @@ podman run \
     --userns keep-id\
     -e KF_SERVER_NAME="${SERVER_NAME}"\
     -e KF_GAMEPASS="${GAME_PASS}" \
-    -v $CURRENT_DIR/kf:/kf \
+    -v $CURRENT_DIR/kf:/kf:Z \
     -p 7707:7707/udp \
     -p 7708:7708/udp \
     -p 7717:7717/udp \
